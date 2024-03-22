@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Crafters Journey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Testing Coffee Crafter's Journey</h1>
+      <h2>Fundamento: Tiempo</h2>
+      <div class="grid">
+        <div class="left-column">
+          <h3>Viaje 1: Los fundamentos</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+        </div>
+        <div class="right-column">
+          <!-- Aquí irá la imagen -->
+          <button class="button">Girar</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="full-row">
+          <h3>Viaje 2: La escuela</h3>
+        </div>
+        <div class="left-column">
+          <h4>Hola</h4>
+          <!-- Espacio para imagen -->
+        </div>
+        <div class="right-column">
+          <!-- Opcionalmente otro contenido -->
+        </div>
+      </div>
+      <div class="form-container">
+        <h2>Hoja de degustación</h2>
+        <form id="tastingSheet">
+          <select name="challenge" required>
+            <option value="">Selecciona el reto completado</option>
+            <option value="Viaje 1: Reto 1">Viaje 1: Reto 1</option>
+            <option value="Viaje 1: Reto 2">Viaje 1: Reto 2</option>
+            <option value="Viaje 2: Reto 1">Viaje 2: Reto 1</option>
+          </select>
+          <input type="text" placeholder="Nombre" name="firstName" />
+          <input type="text" placeholder="Apellido" name="lastName" />
+          <textarea placeholder="Comentarios" name="comments"></textarea>
+          <div class="form-buttons">
+            <button type="reset" id="resetButton" class="button">Vaciar formulario</button>
+            <button type="submit" class="button">Descargar en PDF</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  </body>
+</html>
