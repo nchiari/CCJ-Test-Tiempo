@@ -1,11 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const rotateButton = document.querySelector("button")
-  rotateButton.addEventListener("click", () => {
-    alert("Este botón girará la imagen. Funcionalidad pendiente.")
-  })
-})
+  const challengeTitles = document.querySelectorAll(".challenge-title")
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Encuentra el select
+  const challengeSelect = document.querySelector("select[name='challenge']")
+
+  // Crea una opción en el select para cada título
+  challengeTitles.forEach((title) => {
+    const optionValue = title.getAttribute("data-value")
+    const optionText = title.textContent
+
+    // Crea la nueva opción
+    const newOption = new Option(optionText, optionValue)
+
+    // Añade la nueva opción al select
+    challengeSelect.add(newOption)
+  })
+
   const form = document.getElementById("tastingSheet")
 
   // Vaciar el formulario al recargar la página
@@ -89,6 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
-document.getElementById("resetButton").addEventListener("click", (e) => {
-  form.reset()
+const scrollToFormButtons = document.querySelectorAll(".scrollToForm")
+
+scrollToFormButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    document.getElementById("tastingSheetForm").scrollIntoView({
+      behavior: "smooth",
+    })
+  })
 })
